@@ -12,9 +12,9 @@ def valid_sudoku(board):
                  board[r][c] in square[(r//3),(c//3)]):
                  return False
             else:
-                 rows[r]=board[r][c]
-                 cols[c]=board[r][c]
-                 square[(r//3),(c//3)]=board[r][c]
+                 rows[r].add(board[r][c])
+                 cols[c].add(board[r][c])
+                 square[(r//3),(c//3)].add(board[r][c])
     return True
 board = [["5","3",".",".","7",".",".",".","."]
 ,["6",".",".","1","9","5",".",".","."]
